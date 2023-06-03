@@ -6,6 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/equation_text_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="end"
+        android:padding="16dp"
+        android:text="equation"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@id/result_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/result_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="16dp"
+        android:text="result"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@id/key_pad_flow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/key_pad_flow"
         android:layout_width="0dp"
@@ -25,73 +50,87 @@
     <Button
         android:id="@+id/button1"
         style="@style/numberKeypad"
+        android:onClick="numberClicked"
         android:text="1" />
 
     <Button
         android:id="@+id/button2"
         style="@style/numberKeypad"
+        android:onClick="numberClicked"
         android:text="2" />
 
     <Button
         android:id="@+id/button3"
         style="@style/numberKeypad"
+        android:onClick="numberClicked"
         android:text="3" />
 
     <Button
         android:id="@+id/button4"
         style="@style/numberKeypad"
+        android:onClick="numberClicked"
         android:text="4" />
 
     <Button
         android:id="@+id/button5"
         style="@style/numberKeypad"
+        android:onClick="numberClicked"
         android:text="5" />
 
     <Button
         android:id="@+id/button6"
         style="@style/numberKeypad"
+        android:onClick="numberClicked"
         android:text="6" />
 
     <Button
         android:id="@+id/button7"
         style="@style/numberKeypad"
+        android:onClick="numberClicked"
         android:text="7" />
 
     <Button
         android:id="@+id/button8"
         style="@style/numberKeypad"
+        android:onClick="numberClicked"
         android:text="8" />
 
     <Button
         android:id="@+id/button9"
         style="@style/numberKeypad"
+        android:onClick="numberClicked"
         android:text="9" />
 
     <Button
         android:id="@+id/button0"
         style="@style/numberKeypad"
+        android:onClick="numberClicked"
         android:text="0"
         app:layout_constraintHorizontal_weight="1" />
 
     <Button
         android:id="@+id/button_equal"
         style="@style/operatorKeypad"
+        android:onClick="equalClicked"
         android:text="="
         app:layout_constraintHorizontal_weight="3" />
 
     <Button
         android:id="@+id/button_clear"
         style="@style/operatorKeypad"
+        android:onClick="clearClicked"
         android:text="C" />
 
     <Button
         android:id="@+id/button_plus"
         style="@style/operatorKeypad"
+        android:onClick="operatorClicked"
         android:text="+" />
 
     <Button
         android:id="@+id/button_minus"
         style="@style/operatorKeypad"
+        android:onClick="operatorClicked"
         android:text="-" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
